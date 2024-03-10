@@ -37,8 +37,8 @@ def update_grid(grid, grid_size):
     alive_cells = center_grid == 1
     dead_cells = ~alive_cells
 
-    min_neighbours = 1
-    max_neighbours = 4
+    min_neighbours = 2
+    max_neighbours = 3
 
     # apply Conway's Game of Life rules
     underpopulated_or_overpopulated = (neighbors < min_neighbours) | (
