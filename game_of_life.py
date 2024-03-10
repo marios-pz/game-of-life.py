@@ -20,7 +20,7 @@ def draw_grid(screen, grid, cell_size):
             screen.blit(cell_surface, (x * cell_size, y * cell_size))
 
 
-def update_grid(grid, grid_size):
+def update_grid(grid):
     center_grid = grid[1:-1, 1:-1]
 
     neighbors = (
@@ -74,7 +74,7 @@ def main():
 
         screen.fill((0, 0, 0))
         draw_grid(screen, grid, cell_size)
-        update_grid(grid, grid_size)
+        update_grid(grid)
 
         pygame.display.flip()
         clock.tick(60)
